@@ -7,8 +7,8 @@ const kumpulanFilm = [
         { theater: "Mall Paris Van Surabaya", jam: ["12:15", "15:20", "17:00"] },
         { theater: "Gren Indonesia", jam: ["13:15", "15:25", "17:35"] },
         { theater: "Artha Moro", jam: ["12:55", "15:00", "18:35"] },
-        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] },
-      ],
+        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] }
+      ]
     },
   },
   {
@@ -19,8 +19,8 @@ const kumpulanFilm = [
         { theater: "Mall Paris Van Surabaya", jam: ["12:15", "15:20", "17:00"] },
         { theater: "Gren Indonesia", jam: ["13:15", "15:25", "17:35"] },
         { theater: "Artha Moro", jam: ["12:55", "15:00", "18:35"] },
-        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] },
-      ],
+        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] }
+      ]
     },
   },
   {
@@ -32,8 +32,8 @@ const kumpulanFilm = [
         { theater: "Mall Paris Van Surabaya", jam: ["12:15", "15:20", "17:00"] },
         { theater: "Gren Indonesia", jam: ["13:15", "15:25", "17:35"] },
         { theater: "Artha Moro", jam: ["12:55", "15:00", "18:35"] },
-        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] },
-      ],
+        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] }
+      ]
     },
   },
   {
@@ -44,8 +44,8 @@ const kumpulanFilm = [
         { theater: "Mall Paris Van Surabaya", jam: ["12:15", "15:20", "17:00"] },
         { theater: "Gren Indonesia", jam: ["13:15", "15:25", "17:35"] },
         { theater: "Artha Moro", jam: ["12:55", "15:00", "18:35"] },
-        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] },
-      ],
+        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] }
+      ]
     },
   },
   {
@@ -55,15 +55,17 @@ const kumpulanFilm = [
       bioskop: [
         { theater: "Mall Paris Van Surabaya", jam: ["12:15", "15:20", "17:00"] },
         { theater: "Gren Indonesia", jam: ["13:15", "15:25", "17:35"] },
-        { theater: "Artha Moro", jam: ["15:00", "18:35"] },
-      ],
+        { theater: "Artha Moro", jam: ["15:00", "18:35"] }
+      ]
     },
   },
 ];
 
 const inputFilm = document.getElementById("input_film");
 const inputTheater = document.getElementById("input_theater");
+// const labelTheater = document.getElementById("label_theater");
 const inputJam = document.getElementById("input_jam");
+// const labelJam = document.getElementById("label_jam");
 const inputDataFilm = document.getElementById("input_dataFilm");
 const bookingForm = document.getElementById("booking-form")
 
@@ -85,12 +87,14 @@ pilihFilm()
 
 inputFilm.addEventListener("change", function () {
   inputTheater.classList.remove("d-none");
+  // labelTheater.classList.remove("d-none");
   const dataFilm = inputFilm.options[inputFilm.selectedIndex].value;
   pilihTheater(dataFilm);
 });
 
 inputTheater.addEventListener("change", function () {
   inputJam.classList.remove("d-none");
+  // labelJam.classList.remove("d-none");
   const dataTheater = inputTheater.options[inputTheater.selectedIndex].value;
   const dataFilm = inputFilm.options[inputFilm.selectedIndex].value;
   pilihJam(dataTheater, dataFilm);
@@ -100,7 +104,8 @@ inputDataFilm.addEventListener("click", function () {
   dataFilm = inputFilm.options[inputFilm.selectedIndex].value;
   dataTheater = inputTheater.options[inputTheater.selectedIndex].value;
   dataJam = inputJam.options[inputJam.selectedIndex].value;
-  console.log(dataFilm, dataTheater, dataJam);
+  tampilkanKursi(dataFilm, dataTheater, dataJam)
+  // console.log(dataFilm, dataTheater, dataJam);
   bookingForm.classList = "d-none"
 });
 
@@ -140,6 +145,7 @@ function pilihJam (tempat, namaFilm) {
 
 const kontainerKursi = document.getElementById("kontainerKursi");
 function tampilkanKursi() {
+  
   let row = ['A','B','C','D','E','F']
   for(let i = 0; i < row.length; i++) {
     const divBaris = document.createElement("div");
@@ -159,10 +165,24 @@ function tampilkanKursi() {
     }
   }
 }
-tampilkanKursi();
+// tampilkanKursi();
+
+let totalHarga = 0;
+let jumlahKursi = 0;
 
 function fungsiKursi(namaKolom) {
   console.log(namaKolom)
+  if(document.getElementById(namaKolom).classList.contains('bg-light')) {
+    document.getElementById(namaKolom).classList.remove("bg-light")
+    totalHarga -= 50000
+    jumlahKursi--
+    // document.getElementById(namaKolom).classList = "kelas"
+  } else {
+    document.getElementById(namaKolom).classList += " bg-light";
+    totalHarga += 50000
+    jumlahKursi++
+  }
+  console.log(totalHarga, jumlahKursi);
 }
 
 // function pilihTheater() {
