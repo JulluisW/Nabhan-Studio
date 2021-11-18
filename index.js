@@ -138,6 +138,32 @@ function pilihJam (tempat, namaFilm) {
   }
 }
 
+const kontainerKursi = document.getElementById("kontainerKursi");
+function tampilkanKursi() {
+  let row = ['A','B','C','D','E','F']
+  for(let i = 0; i < row.length; i++) {
+    const divBaris = document.createElement("div");
+    divBaris.classList = 'row-kursi';
+    divBaris.id = 'kursiBaris' + row[i];
+    kontainerKursi.appendChild(divBaris);
+    for(let j = 1; j <= 6; j++) {
+      const idKursiBaris = "kursiBaris" + row[i]; 
+      const divKursi = document.getElementById(idKursiBaris);
+      const buttonKolom = document.createElement("button");
+      buttonKolom.classList = 'kursi';
+      const namaKursiKolom = 'kursi' + row[i] + j
+      buttonKolom.id = namaKursiKolom;
+      buttonKolom.innerHTML = row[i] + j;
+      buttonKolom.setAttribute('onclick', `fungsiKursi('${namaKursiKolom}')`)
+      divKursi.appendChild(buttonKolom);
+    }
+  }
+}
+tampilkanKursi();
+
+function fungsiKursi(namaKolom) {
+  console.log(namaKolom)
+}
 
 // function pilihTheater() {
 //   let dataFilm = inputFilm.options[inputFilm.selectedIndex].value;
