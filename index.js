@@ -63,7 +63,9 @@ const kumpulanFilm = [
 
 const inputFilm = document.getElementById("input_film");
 const inputTheater = document.getElementById("input_theater");
+const labelTheater = document.getElementById("label_theater");
 const inputJam = document.getElementById("input_jam");
+const labelJam = document.getElementById("label_jam");
 const inputDataFilm = document.getElementById("input_dataFilm");
 const bookingForm = document.getElementById("booking-form")
 
@@ -85,12 +87,14 @@ pilihFilm()
 
 inputFilm.addEventListener("change", function () {
   inputTheater.classList.remove("d-none");
+  labelTheater.classList.remove("d-none");
   const dataFilm = inputFilm.options[inputFilm.selectedIndex].value;
   pilihTheater(dataFilm);
 });
 
 inputTheater.addEventListener("change", function () {
   inputJam.classList.remove("d-none");
+  labelJam.classList.remove("d-none");
   const dataTheater = inputTheater.options[inputTheater.selectedIndex].value;
   const dataFilm = inputFilm.options[inputFilm.selectedIndex].value;
   pilihJam(dataTheater, dataFilm);
@@ -100,7 +104,7 @@ inputDataFilm.addEventListener("click", function () {
   dataFilm = inputFilm.options[inputFilm.selectedIndex].value;
   dataTheater = inputTheater.options[inputTheater.selectedIndex].value;
   dataJam = inputJam.options[inputJam.selectedIndex].value;
-  console.log(dataFilm, dataTheater, dataJam);
+  // console.log(dataFilm, dataTheater, dataJam);
   bookingForm.classList = "d-none"
 });
 
@@ -161,8 +165,22 @@ function tampilkanKursi() {
 }
 tampilkanKursi();
 
+let totalHarga = 0;
+let jumlahKursi = 0;
+
 function fungsiKursi(namaKolom) {
   console.log(namaKolom)
+  if(document.getElementById(namaKolom).classList.contains('bg-light')) {
+    document.getElementById(namaKolom).classList.remove("bg-light")
+    totalHarga -= 50000
+    jumlahKursi--
+    // document.getElementById(namaKolom).classList = "kelas"
+  } else {
+    document.getElementById(namaKolom).classList += " bg-light";
+    totalHarga += 50000
+    jumlahKursi++
+  }
+  console.log(totalHarga, jumlahKursi);
 }
 
 // function pilihTheater() {
