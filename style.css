@@ -35,17 +35,43 @@ width: ;
   border-radius: 10px;
 }
 
-.cinema{
-  margin: 0%;
-  padding: 0%;
-  background-color: tan;
+.container-cinema{
+  width: 100vw;
   height: 100vh;
-  display: flex;
+  background-color: coral;
+  padding-top: 8vh;
 }
 
 .layar{
-  background: black;
-  height: 8%;
-  width: 75%;
-  al
+  width: 76vw;
+  height: 8vh;
+  background-color: black;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 12vh;
+}
+
+.container-kursi{
+  width: 76vw;
+  height: 70vh;
+  background-color: rgb(107, 68, 68);
+  margin-left: 10vw;
+  margin-right: 10vw;
+  
+}
+
+.row-kursi{
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+}
+
+.kursi{
+  width: 10vw;
+  height: 8vh;
+  background-color: cadetblue;
+  margin-bottom: 2vh;
 }
