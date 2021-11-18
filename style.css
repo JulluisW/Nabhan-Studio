@@ -3,7 +3,9 @@
   padding: 0%;
 }
 
-header{
+
+
+nav{
   text-align: center;
   font-size: 5rem;
   margin: 0%;
@@ -15,10 +17,11 @@ header{
 }
 
 .logo{
-width: ;
+width: 100px;
 }
 .cards {
   display: flex;
+  margin-top: 20px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -75,6 +78,21 @@ width: ;
   background-color: cadetblue;
   margin-bottom: 2vh;
 }
+
+
+.checkout-container{
+text-align: center;
+background-color: coral;
+stroke: black;
+}
+
+.book{
+  text-align: center;
+  text-decoration-color: blueviolet;
+}
+
+.email{
+  text-align: center;
 
 .container-totalharga{
   width: 76vw;
