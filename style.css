@@ -75,3 +75,47 @@ width: ;
   background-color: cadetblue;
   margin-bottom: 2vh;
 }
+
+.container-totalharga{
+  width: 76vw;
+  height: 20vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-harga{
+  height: auto;
+  width: 30vw;
+  padding: 2%;
+  background-color: darkgray;
+  text-align: center;
+}
+
+.submit-total-harga{
+  margin: 2%;
+  width: 10vw;
+  padding: 1.5%;
+}
+
+.metode-pembayaran-container{
+  width: 40vw;
+  height: 80%;
+  background-color: darkkhaki;
+}
+
+.metode-pembayaran-icon{
+  height: 20%;
+  width: auto;
+  min-width: 10%;
+  max-width: 15%;
+}
+
+.visa{
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: darkorange;
+}
