@@ -1,0 +1,54 @@
+Category : E-comerce
+
+Ida : Martabak online
+	- ada option pickup / delivery
+	- isian custom / order
+	- harga / nota pembayaran
+	- checkout payment
+Dyah : Toko bangunan online
+	- tampilkan alat2 bangunan sesuai category
+	- order barang
+	- dikirim ke alamat mana (delivery)
+	- harga / nota pembayaran
+	- checkout payment
+Luis : Booking bioskop / pesawat
+	- pilih tanggal dan movie dan lokasi
+	- pesan category tiket dan pilih seat (kelihatan yang mana yg sudah taken)
+	- pilih snack(bioskop)
+	- note lain2
+	- checkout payment
+Nabhan : Coffee Shop
+	- ada option pickup / delivery
+	- isian custom / order
+	- harga / nota pembayaran
+	- checkout payment
+	- membership/promo
+Syarief : property online
+	- cari lokasi property yang diinginkan
+	- list property yang ada beserta detail
+	- book appointment
+	- bayar DP/ info KPR /info kredit / ....
+
+Ida : 0
+Dyah : 2
+Luis : 3
+Nabhan : 2
+syarief : 2
+
+
+
+						BIOSKOP HACKTIV19
+
+
+Home
+
+navbar
+search box
+
+Now-Playing gambar film2 beserta sedikit descripsi
+	- gambar2 nya bisa di klik dan langsung ke menu booking
+	- mengisi detail booking
+
+fitur :
+- Pilih waktu, tempat dan tiket seat
+- Pilih metode pembayaran
