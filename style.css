@@ -137,3 +137,44 @@ stroke: black;
   display: block;
   background-color: darkorange;
 }
+
+.container-output-ticket{
+  width: 100vw;
+  height: auto;
+  min-height: 80vh;
+  max-width: 100vw;
+  background-color: darksalmon;
+  text-align: center;
+  
+}
+
+.header-output-tiket{
+  /* margin-top: 10%; */
+  padding-top: 2%;
+  font-size: 2.8rem;
+}
+
+.header-output-tiket p{
+  margin: 0px;
+  padding: 0px;
+}
+
+.body-output-tiket{
+  background-color: cyan;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-bottom: 5%;
+  margin-top: 3%;
+}
+
+.body-output-tiket p{
+  font-size: 2.6rem;
+}
+
+.output-tiket-home{
+  height: 8vh;
+  width: 12 vw;
+}
