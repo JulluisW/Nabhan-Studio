@@ -5,12 +5,9 @@
 
 
 
-nav{
+.navbar{
   text-align: center;
   font-size: 5rem;
-  margin: 0%;
-  padding: 0%;
-  display: flex;
   background-color: slategrey;
   /* background-color: blueviolet; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
