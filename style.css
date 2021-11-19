@@ -51,12 +51,46 @@ width: 100px;
   width: 100vw;
   height: 80vh;
   background-color: mediumaquamarine;
+ 
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir */
 
-/* vvvvvvvvvvvvvvvvvvvvvvvvvv awal upcoming movie */
+/* vvvvvvvvvvvvvvvvvvvvvvvvvv awal ongoing movie */
+.nowplaying-movie{
+  text-align: center;
+}
+.container-ongoing-movie{
+  max-width: 99vw;
+  min-height: 50vh;
+  height: auto;
+  padding-right: 3vw;
+  background-color: mediumaquamarine;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 7vw;
+  padding-bottom: 12vh;
+  align-items: center;
+}
 
-/* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir upcoming movie */
+  .kartu-ongoing-movie{
+    width: 15vh;
+    height: 20vh;
+    background-color: darkseagreen;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+
+  .kartu-ongoing-movie img{
+    max-width: 20vh;
+    
+  }
+
+  .title-kartu-movie{
+    font-size: 1.4rem;
+    text-align: center;
+  }
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir ongoing movie */
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvv awal section pilih movie */
 
