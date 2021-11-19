@@ -7,8 +7,8 @@ const kumpulanFilm = [
         { theater: "Mall Paris Van Surabaya", jam: ["12:15", "15:20", "17:00"] },
         { theater: "Gren Indonesia", jam: ["13:15", "15:25", "17:35"] },
         { theater: "Artha Moro", jam: ["12:55", "15:00", "18:35"] },
-        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] }
-      ]
+        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] },
+      ],
     },
   },
   {
@@ -19,8 +19,8 @@ const kumpulanFilm = [
         { theater: "Mall Paris Van Surabaya", jam: ["12:15", "15:20", "17:00"] },
         { theater: "Gren Indonesia", jam: ["13:15", "15:25", "17:35"] },
         { theater: "Artha Moro", jam: ["12:55", "15:00", "18:35"] },
-        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] }
-      ]
+        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] },
+      ],
     },
   },
   {
@@ -32,8 +32,8 @@ const kumpulanFilm = [
         { theater: "Mall Paris Van Surabaya", jam: ["12:15", "15:20", "17:00"] },
         { theater: "Gren Indonesia", jam: ["13:15", "15:25", "17:35"] },
         { theater: "Artha Moro", jam: ["12:55", "15:00", "18:35"] },
-        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] }
-      ]
+        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] },
+      ],
     },
   },
   {
@@ -44,35 +44,32 @@ const kumpulanFilm = [
         { theater: "Mall Paris Van Surabaya", jam: ["12:15", "15:20", "17:00"] },
         { theater: "Gren Indonesia", jam: ["13:15", "15:25", "17:35"] },
         { theater: "Artha Moro", jam: ["12:55", "15:00", "18:35"] },
-        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] }
-      ]
+        { theater: "Armadilo Town Square", jam: ["13:00", "16:25", "19:35"] },
+      ],
     },
   },
   {
-    "Kobocan": {
+    Kobocan: {
       img: "https://s2.bukalapak.com/img/7720877431/s-330-330/Komik_Kobo_Chan_Vol10_By_Masashi_Ueda___Penerbit_Elex_Media.jpg.webp",
       sinopsis: "Eddie (Tom Hardy) yang kini sudah berteman dengan Venom berusaha hidup normal, namun masalah datang saat ia bertemu dengan Cletus Kasady (Woody Harrelson) yang diketahui sebagai inang dari symbiote dengan sebutan Carnage.",
       bioskop: [
         { theater: "Mall Paris Van Surabaya", jam: ["12:15", "15:20", "17:00"] },
         { theater: "Gren Indonesia", jam: ["13:15", "15:25", "17:35"] },
-        { theater: "Artha Moro", jam: ["15:00", "18:35"] }
-      ]
+        { theater: "Artha Moro", jam: ["15:00", "18:35"] },
+      ],
     },
   },
 ];
 
-document.getElementsByClassName("poster-movie-terpilih").src = "./img/venom.jpg"
+document.getElementsByClassName("poster-movie-terpilih").src = "./img/venom.jpg";
 const inputFilm = document.getElementById("input_film");
 const inputTheater = document.getElementById("input_theater");
-// const labelTheater = document.getElementById("label_theater");
+const labelTheater = document.getElementById("label_theater");
 const inputJam = document.getElementById("input_jam");
-// const labelJam = document.getElementById("label_jam");
+const labelJam = document.getElementById("label_jam");
 const inputDataFilm = document.getElementById("input_dataFilm");
-const bookingForm = document.getElementById("booking-form")
-
-let dataFilm = '';
-let dataTheater = '';
-let dataJam = '';
+const bookingForm = document.getElementById("booking-form");
+const emailInput = document.getElementById("input_email");
 
 function pilihFilm() {
   for (const movie of kumpulanFilm) {
@@ -84,37 +81,55 @@ function pilihFilm() {
     }
   }
 }
-pilihFilm()
+pilihFilm();
 
 inputFilm.addEventListener("change", function () {
   inputTheater.classList.remove("d-none");
-  // labelTheater.classList.remove("d-none");
+  labelTheater.classList.remove("d-none");
   const dataFilm = inputFilm.options[inputFilm.selectedIndex].value;
+  changeMovieImg(dataFilm);
   pilihTheater(dataFilm);
 });
 
+function changeMovieImg(movie) {
+  for (let i = 0; i < kumpulanFilm.length; i++) {
+    if (kumpulanFilm[i][movie]) {
+      document.getElementById("poster-movie-terpilih").src = kumpulanFilm[i][movie].img;
+      document.getElementById("deskripsi-pilih-movie").innerHTML = kumpulanFilm[i][movie].sinopsis;
+      document.getElementById("judul-pilih-movie").innerHTML = movie;
+      console.log(kumpulanFilm[i][movie].img);
+    }
+  }
+}
+
 inputTheater.addEventListener("change", function () {
   inputJam.classList.remove("d-none");
-  // labelJam.classList.remove("d-none");
+  labelJam.classList.remove("d-none");
   const dataTheater = inputTheater.options[inputTheater.selectedIndex].value;
   const dataFilm = inputFilm.options[inputFilm.selectedIndex].value;
   pilihJam(dataTheater, dataFilm);
 });
 
 inputDataFilm.addEventListener("click", function () {
-  dataFilm = inputFilm.options[inputFilm.selectedIndex].value;
-  dataTheater = inputTheater.options[inputTheater.selectedIndex].value;
-  dataJam = inputJam.options[inputJam.selectedIndex].value;
-  tampilkanKursi(dataFilm, dataTheater, dataJam)
-  // console.log(dataFilm, dataTheater, dataJam);
-  bookingForm.classList = "d-none"
+  const dataFilm = inputFilm.options[inputFilm.selectedIndex].value;
+  const dataTheater = inputTheater.options[inputTheater.selectedIndex].value;
+  const dataJam = inputJam.options[inputJam.selectedIndex].value;
+  if (!emailInput.value || dataFilm == "Pilih" || dataTheater == "Pilih" || dataJam == "Pilih") {
+    alert("Data belum lengkap!");
+  } else {
+    tampilkanKursi();
+    pesanFilm(emailInput.value, dataFilm, dataTheater, dataJam);
+    // console.log(dataFilm, dataTheater, dataJam);
+    document.getElementById("container-pilih-movie").classList = "d-none";
+    inputDataFilm.for = "container-cinema";
+    // console.log(emailInput.value);
+  }
 });
-
 
 function pilihTheater(namaFilm) {
   for (let i = 0; i < kumpulanFilm.length; i++) {
     if (kumpulanFilm[i][namaFilm]) {
-      const teater = kumpulanFilm[i][namaFilm].bioskop
+      const teater = kumpulanFilm[i][namaFilm].bioskop;
       for (let j = 0; j < teater.length; j++) {
         const optionTheater = document.createElement("option");
         optionTheater.text = teater[j].theater;
@@ -128,7 +143,7 @@ function pilihTheater(namaFilm) {
 function pilihJam(tempat, namaFilm) {
   for (let i = 0; i < kumpulanFilm.length; i++) {
     if (kumpulanFilm[i][namaFilm]) {
-      const teater = kumpulanFilm[i][namaFilm].bioskop
+      const teater = kumpulanFilm[i][namaFilm].bioskop;
       for (let j = 0; j < teater.length; j++) {
         // tampilkan jam option
         if (teater[j].theater === tempat) {
@@ -146,22 +161,21 @@ function pilihJam(tempat, namaFilm) {
 
 const kontainerKursi = document.getElementById("kontainerKursi");
 function tampilkanKursi() {
-
-  let row = ['A', 'B', 'C', 'D', 'E', 'F']
+  let row = ["A", "B", "C", "D", "E", "F"];
   for (let i = 0; i < row.length; i++) {
     const divBaris = document.createElement("div");
-    divBaris.classList = 'row-kursi';
-    divBaris.id = 'kursiBaris' + row[i];
+    divBaris.classList = "row-kursi";
+    divBaris.id = "kursiBaris" + row[i];
     kontainerKursi.appendChild(divBaris);
     for (let j = 1; j <= 6; j++) {
       const idKursiBaris = "kursiBaris" + row[i];
       const divKursi = document.getElementById(idKursiBaris);
       const buttonKolom = document.createElement("button");
-      buttonKolom.classList = 'kursi';
-      const namaKursiKolom = 'kursi' + row[i] + j
+      buttonKolom.classList = "kursi";
+      const namaKursiKolom = "kursi" + row[i] + j;
       buttonKolom.id = namaKursiKolom;
       buttonKolom.innerHTML = row[i] + j;
-      buttonKolom.setAttribute('onclick', `fungsiKursi('${namaKursiKolom}')`)
+      buttonKolom.setAttribute("onclick", `fungsiKursi('${namaKursiKolom}')`);
       divKursi.appendChild(buttonKolom);
     }
   }
@@ -172,18 +186,27 @@ let totalHarga = 0;
 let jumlahKursi = 0;
 
 function fungsiKursi(namaKolom) {
-  console.log(namaKolom)
-  if (document.getElementById(namaKolom).classList.contains('bg-light')) {
-    document.getElementById(namaKolom).classList.remove("bg-light")
-    totalHarga -= 50000
-    jumlahKursi--
+  console.log(namaKolom);
+  if (document.getElementById(namaKolom).classList.contains("bg-light")) {
+    document.getElementById(namaKolom).classList.remove("bg-light");
+    totalHarga -= 50000;
+    jumlahKursi--;
     // document.getElementById(namaKolom).classList = "kelas"
   } else {
     document.getElementById(namaKolom).classList += " bg-light";
-    totalHarga += 50000
-    jumlahKursi++
+    totalHarga += 50000;
+    jumlahKursi++;
   }
-  console.log(totalHarga, jumlahKursi);
+}
+
+function pesanFilm(dataEmail, dataFilm, dataTheater, dataJam) {
+  const output = {
+    email: dataEmail,
+    film: dataFilm,
+    theater: dataTheater,
+    jam: dataJam,
+  };
+  return output;
 }
 
 // function pilihTheater() {
