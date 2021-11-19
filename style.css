@@ -55,21 +55,156 @@ width: 100px;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir */
 
+
+/* vvvvvvvvvvvvvvvvvvvvvvvvvv awal */
+/* * {box-sizing:border-box} */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 90vw;
+  max-height: 70vh;
+  position: relative;
+  margin: auto;
+  object-fit: contain;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  object-fit: contain;
+  max-height: 60vh;
+
+}
+
+.tengah-carousel{
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-movie{
+  max-width: 70vw;
+  max-height: 50vh;
+  /* height: 200px; */
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+}
+
+.container-carousel{
+  max-height: 100vh;
+  /* display: block; */
+  background-color: mediumpurple;
+  margin-top: 8vh;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 15s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir */
+
 /* vvvvvvvvvvvvvvvvvvvvvvvvvv awal ongoing movie */
 .nowplaying-movie{
   text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
 }
 .container-ongoing-movie{
   max-width: 99vw;
-  min-height: 50vh;
-  height: auto;
+  min-height: 10vh;
+  height: 50vh;
+  /* height: auto; */
   padding-right: 3vw;
   background-color: mediumaquamarine;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   gap: 7vw;
-  padding-bottom: 12vh;
+  /* padding-bottom: 12vh; */
   align-items: center;
 }
 
@@ -102,11 +237,13 @@ width: 100px;
   justify-content: center;
   align-items: center;
   gap: 1.2%;
+  flex-wrap: wrap;
 }
 
   .deskripsi-pilih-movie{
     height: 75%;
     width: 30%;
+    min-width: 250px;
     background-color: linen;
     text-align: center;
   }
@@ -125,12 +262,23 @@ width: 100px;
 
   .poster-pilih-movie{
     height: 75%;
+    min-width: 250px;
     width: 30%;
     background-color: linen;
+    display: flex;
   }
+
+    .poster-movie-terpilih{
+      width: 100%;
+      height: auto;
+      align-items: center;
+      align-self: center;
+      align-content: center ;
+    }
 
   .detail-pilih-movie{
     height: 75%;
+    min-width: 250px;
     width: 30%;
     background-color: linen;
     display: flex;
