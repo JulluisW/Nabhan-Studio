@@ -198,6 +198,11 @@
         <div class="checkout-container">
           <div class="metode-pembayaran-container">
             <p class="metode-pembayaran">Metode pembayaran :</p>
+            <select class="form-select mb-5" id="input_pembayaran" aria-label="Default select example">
+              <option selected>Pilih</option>
+              <option value="">Bopay</option>
+              <option value="">OPO</option>
+              <option value="">Gana</option>
           </div>
         </div>
       </div>
@@ -206,8 +211,10 @@
 
     <div class="separator-section"></div>
 
+    <div>Hello World</div>
+
     <!-- awal section output tiket -->
-    <div class="container-output-ticket d-none">
+    <div class="container-output-ticket" id="container-output-ticket">
       <div class="header-output-tiket">
         <p>Terimakasih telah memesan tiket di bioskop Nabhan</p>
         <p>Mohon menghubungi resepsionis untuk menukar tiket</p>
@@ -218,7 +225,7 @@
         <p class="output-seat-tiket" id="output-seat-tiket">Seats : nomer kursi</p>
         <p class="output-time-tiket" id="output-time-tiket">Time : Jam movie</p>
       </div>
-      <button class="output-tiket-home">Kembali ke beranda</button>
+      <button class="output-tiket-home" id="output-tiket-home">Kembali ke beranda</button>
     </div>
     <!-- akhir section tiket -->
 
