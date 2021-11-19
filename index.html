@@ -137,7 +137,7 @@
       </div>
       <div class="poster-pilih-movie">
         <img src="#" alt="" class="poster-movie-terpilih" id="poster-movie-terpilih" />
-    </div>
+      </div>
       <div class="detail-pilih-movie">
         <div class="book" id="booking-form">
           <label for="input_email">Email address</label>
@@ -158,7 +158,7 @@
             <option selected>Pilih</option>
           </select>
 
-          <input type="submit" id="input_dataFilm"/>
+          <input type="submit" id="input_dataFilm" />
         </div>
 
         <!-- <button type="button" class="btn btn-primary">Submit</button> -->
@@ -181,7 +181,7 @@
     <!-- akhir section pilih movie -->
 
     <!-- awal section cinema -->
-    <div class="container-cinema" id="container-cinema">
+    <div class="container-cinema d-none" id="container-cinema">
       <div class="layar"></div>
 
       <div class="container-kursi" id="kontainerKursi"></div>
@@ -191,8 +191,8 @@
           <div class="total-harga">
             <p>banyak kursi x harga per kursi</p>
           </div>
-          <button class="submit-total-harga">submit</button>
-          <button class="submit-total-harga">cancel</button>
+          <button class="submit-total-harga" id="submit-final">submit</button>
+          <button class="submit-total-harga" id="cancel-tiket">cancel</button>
         </div>
 
         <div class="checkout-container">
@@ -207,16 +207,16 @@
     <div class="separator-section"></div>
 
     <!-- awal section output tiket -->
-    <div class="container-output-ticket">
+    <div class="container-output-ticket d-none">
       <div class="header-output-tiket">
         <p>Terimakasih telah memesan tiket di bioskop Nabhan</p>
         <p>Mohon menghubungi resepsionis untuk menukar tiket</p>
       </div>
       <div class="body-output-tiket">
-        <p class="output-tiket-movie">Movie : Nama Movie</p>
-        <p class="output-studio-tiket">Studio : studio nomer</p>
-        <p class="output-seat-tiket">Seats : nomer kursi</p>
-        <p class="output-time-tiket">Time : Jam movie</p>
+        <p class="output-tiket-movie" id="output-tiket-movie">Movie : Nama Movie</p>
+        <p class="output-studio-tiket" id="output-studio-tiket">Studio : studio nomer</p>
+        <p class="output-seat-tiket" id="output-seat-tiket">Seats : nomer kursi</p>
+        <p class="output-time-tiket" id="output-time-tiket">Time : Jam movie</p>
       </div>
       <button class="output-tiket-home">Kembali ke beranda</button>
     </div>

@@ -70,6 +70,8 @@ const labelJam = document.getElementById("label_jam");
 const inputDataFilm = document.getElementById("input_dataFilm");
 const bookingForm = document.getElementById("booking-form");
 const emailInput = document.getElementById("input_email");
+const submitSeat = document.getElementById("submit-final");
+const cancelSeat = document.getElementById("cancel-tiket")
 
 function pilihFilm() {
   for (const movie of kumpulanFilm) {
@@ -122,6 +124,7 @@ inputDataFilm.addEventListener("click", function () {
     // console.log(dataFilm, dataTheater, dataJam);
     document.getElementById("container-pilih-movie").classList = "d-none";
     inputDataFilm.for = "container-cinema";
+    document.getElementById("container-cinema").classList.remove("d-none")
     // console.log(emailInput.value);
   }
 });
@@ -184,6 +187,7 @@ function tampilkanKursi() {
 
 let totalHarga = 0;
 let jumlahKursi = 0;
+let seats = {};
 
 function fungsiKursi(namaKolom) {
   console.log(namaKolom);
@@ -191,11 +195,13 @@ function fungsiKursi(namaKolom) {
     document.getElementById(namaKolom).classList.remove("bg-light");
     totalHarga -= 50000;
     jumlahKursi--;
+    delete seats[namaKolom];
     // document.getElementById(namaKolom).classList = "kelas"
   } else {
     document.getElementById(namaKolom).classList += " bg-light";
     totalHarga += 50000;
     jumlahKursi++;
+    seats[namaKolom] = 1;
   }
 }
 
@@ -208,6 +214,28 @@ function pesanFilm(dataEmail, dataFilm, dataTheater, dataJam) {
   };
   return output;
 }
+
+submitSeat.addEventListener("click", function () {
+  let metodePembayaran = metode-pembayaran.options[inputFilm.selectedIndex].value;
+  if (metodePembayaran == "Pilih") {
+    alert("Mohon pilih metode pembayaran!");
+  } else if (jumlahKursi == 0) {
+    alert("Mohon pilih kursi!");
+  } else {
+    const pesanFilm = pesanFilm()
+    submitSeat.for = "container-output-ticket";
+    document.getElementById("container-cinema").classList += " d-none";
+    document.getElementById("container-output-ticket").remove("d-none");
+    document.getElementById("output-tiket-movie").innerText = `Movie: ${dataFilm}`
+    document.getElementById("output-studio-tiket").innerText = `@ ${dataTheater}`
+    document.getElementById("output-seat-tiket");
+    document.getElementById("output-time-tiket").innerText = dataJam
+  }
+});
+
+cancelSeat.addEventListener("click", function() {
+  document.location.reload()
+})
 
 // function pilihTheater() {
 //   let dataFilm = inputFilm.options[inputFilm.selectedIndex].value;
