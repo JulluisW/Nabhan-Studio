@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@300&family=Pacifico&display=swap" rel="stylesheet">
   <title>index page</title>
 </head>
 
@@ -17,91 +18,27 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-slategrey">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="/Nabhan-Studio/img/logopop.png" width="50" height="50" /></a>
+        <a class="navbar-brand" href="#"><img src="img/logofilm.png" width="170" height="auto" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">UpComing</a>
-            <a class="nav-link" href="#">Book Now</a>
+            <a class="nav-link " aria-current="page" href="#home">Home</a>
+            <a class="nav-link" href="#upcoming">UpComing</a>
+            <a class="nav-link" href="#container-pilih-movie">Book Now</a>
           </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- <div class="container text-center">
-    <div class="row">
-      <div class="col">
-        <div class="cards">
-          <div class="card">
-            <div class="profile">
-              <img src="https://media.21cineplex.com/webcontent/gallery/pictures/163672064040998_287x421.jpg" />
-              <p>“Jangan takut mengejar mimpimu, semua orang bisa belajar programming di Hacktiv7”</p>
-              <span>Fajrin Noor Rachman</span>
-              <span>Teacher's Award Hacktiv7</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="cards">
-          <div class="card">
-            <div class="profile">
-              <img src="http://www.klikstarvision.com/asset/movie_photo/31-Cinta-Monyet.jpg" />
-              <p>“Jangan takut mengejar mimpimu, semua orang bisa belajar programming di Hacktiv7”</p>
-              <span>Cinta monyet</span>
-              <span>Teacher's Award Hacktiv7</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="cards">
-          <div class="card">
-            <div class="profile">
-              <img src="https://i.pinimg.com/564x/5e/a5/24/5ea524be1d230dc27809d6942a0a2947.jpg" />
-              <p>“Jangan takut mengejar mimpimu, semua orang bisa belajar programming di Hacktiv7”</p>
-              <span>Fajrin Noor Rachman</span>
-              <span>Teacher's Award Hacktiv7</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="container">
-    <div class="box"></div>
-    <div class="cards">
-      <div class="card">
-        <div class="profile">
-          <img src="https://media.21cineplex.com/webcontent/gallery/pictures/163307229284629_287x421.jpg" />
-          <p>“Jangan takut mengejar mimpimu, semua orang bisa belajar programming di Hacktiv7”</p>
-          <span>Fajrin Noor Rachman</span>
-          <span>Teacher's Award Hacktiv7</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" aria-label="Text input with dropdown button" />
-      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-        aria-expanded="false">Dropdown</button>
-      <ul class="dropdown-menu dropdown-menu-end">
-        <li><a class="dropdown-item" href="#">Venom</a></li>
-        <li><a class="dropdown-item" href="#">Sapiderman</a></li>
-        <li><a class="dropdown-item" href="#">Cinta monyet</a></li>
-      </ul>
-    </div>
-  </div> -->
   
   <!-- awal carousel  -->
   
-  <h2 class="nowplaying-movie text-center">Now Playing in Nabhan Cinema</h2>
+  <h2 class="nowplaying-movie text-center mt-3 white" id="home">Now Playing in Nabhan Cinema</h2>
   <div class="container-carousel">
     <!-- Slideshow container -->
     <div class="slideshow-container">
@@ -110,19 +47,19 @@
       <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
         <img class="carousel-movie tengah-carousel" src="img/dilan-91-1.png" style="width:100% carousel-movie">
-        <div class="text">Caption Text</div>
+        <!-- <div class="text">Caption Text</div> -->
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
         <img class="carousel-movie" src="img/superman.jpg" style="width:100px carousel-movie">
-        <div class="text">Caption Two</div>
+        <!-- <div class="text">Caption Two</div> -->
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">3 / 3</div>
         <img class="carousel-movie" src="img/venomLS.jpg" style="width:100% carousel-movie">
-        <div class="text">Caption Three</div>
+        <!-- <div class="text">Caption Three</div> -->
       </div>
 
       <!-- Next and previous buttons -->
@@ -144,21 +81,21 @@
   <div class="separator-section"></div>
 
   <!-- awal movie -->
-  <h2 class="nowplaying-movie text-center">Upcoming Movie in Nabhan Cinema</h2>
+  <h2 class="upcoming-movie text-center white" id="upcoming">Upcoming Movie in Nabhan Cinema</h2>
   <div class="container-ongoing-movie">
     <div class="kartu-ongoing-movie">
-      <img class="gambar-kartu-ongoing-movie" src="img/venom.jpg" alt="" />
-      <h3 class="title-kartu-movie">Judul Movie</h3>
+      <img class="gambar-kartu-ongoing-movie" src="https://media.21cineplex.com/webcontent/gallery/pictures/163342791898782_287x421.jpg" alt="" />
+      <h3 class="title-kartu-movie white">Run Hide Fight</h3>
     </div>
 
     <div class="kartu-ongoing-movie">
-      <img class="gambar-kartu-ongoing-movie" src="img/venom.jpg" alt="" />
-      <h3 class="title-kartu-movie">Judul Movie</h3>
+      <img class="gambar-kartu-ongoing-movie" src="https://media.21cineplex.com/webcontent/gallery/pictures/163652126784740_287x421.jpg" alt="" />
+      <h3 class="title-kartu-movie white">Encanto</h3>
     </div>
 
     <div class="kartu-ongoing-movie">
-      <img class="gambar-kartu-ongoing-movie" src="img/venom.jpg" alt="" />
-      <h3 class="title-kartu-movie">Judul Movie</h3>
+      <img class="gambar-kartu-ongoing-movie" src="https://media.21cineplex.com/webcontent/gallery/pictures/163334468236882_287x421.jpg" alt="" />
+      <h3 class="title-kartu-movie white">Yowis Ben 3</h3>
     </div>
   </div>
 
@@ -178,41 +115,45 @@
 
 
   <div class="container-pilih-movie" id="container-pilih-movie">
-    <div class="deskripsi-pilih-movie">
-      <h2 class="judul-pilih-movie" id="judul-pilih-movie">Movie Title</h2>
+    <div class="deskripsi-pilih-movie d-flex flex-column">
+      <h2 class="judul-pilih-movie white" id="judul-pilih-movie">Nabhan Studio</h2>
       <p class="deskripsi-pilih-movie" id="deskripsi-pilih-movie">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dolorum atque quos in architecto aliquid iste,
-        placeat suscipit praesentium repellat dolores sed, officiis nisi quo deserunt magnam nulla, quis unde?
+        Nabhan Studio terbentuk pada Tahun 1945, bersamaan dengan kemerdekaan Indonesia. Nabhan Studio sudah menayangkan jutaan film dari berbagai bangsa dan planet.
+        <br><br>
+        Disponsori oleh : Julluis, Dyah, Narinda, Syarief, Teddy(Juned) dibayar Tunai!
       </p>
+      <!-- <ul class="danger list-playing" id="playing-at">
+        Now Playing at:
+        <li>Mall Kelapag gading : 15.54, 12.44</li>
+        <li>Mall Kelapag gading : 15.54, 12.44</li>
+        <li>Mall Kelapag gading : 15.54, 12.44</li>
+      </ul> -->
     </div>
     <div class="poster-pilih-movie">
-      <img src="#" alt="" class="poster-movie-terpilih" id="poster-movie-terpilih" />
+      <img src="img/logofilm.png" alt="" class="poster-movie-terpilih" id="poster-movie-terpilih" />
     </div>
     <div class="detail-pilih-movie">
       <div class="book" id="booking-form">
         <label for="input_email">Email address</label>
         <input type="email" class="form-control" id="input_email" aria-describedby="emailHelp"
-          placeholder="Enter email" />
+          placeholder="Enter email" /><br>
 
         <label for="input_film">Movie</label>
-        <select class="form-select mb-5" id="input_film" aria-label="Default select example">
+        <select class="form-select" id="input_film" aria-label="Default select example">
           <option selected>Pilih</option>
-        </select>
+        </select><br>
 
-        <label class="d-none" id="label_theater" for="input_theater">Movie</label>
-        <select class="form-select mb-5 d-none" id="input_theater" aria-label="Default select example">
+        <label class="d-none" id="label_theater" for="input_theater">Theater</label>
+        <select class="form-select d-none" id="input_theater" aria-label="Default select example">
           <option selected>Pilih</option>
-        </select>
+        </select><br>
 
-   
-
-
-        <label class="d-none" id="label_jam" for="input_jam">Movie</label>
-        <select class="form-select mb-5 d-none" id="input_jam" aria-label="Default select example">
+        <label class="d-none" id="label_jam" for="input_jam">Jam</label>
+        <select class="form-select d-none" id="input_jam" aria-label="Default select example">
           <option selected>Pilih</option>
-        </select>
+        </select><br>
 
-        <input type="submit" id="input_dataFilm" />
+        <input class = "submit-total-harga" type="submit" id="input_dataFilm" />
       </div>
 
       <!-- <button type="button" class="btn btn-primary">Submit</button> -->
@@ -234,6 +175,22 @@
 
   <!-- akhir section pilih movie -->
 
+ <!-- awal section output tiket -->
+ <div class="container-output-ticket d-none" id="container-output-ticket">
+  <div class="header-output-tiket">
+    <p>Terimakasih telah memesan tiket di bioskop Nabhan</p>
+    <p>Mohon menuju Ticket Box untuk menukar tiket</p>
+  </div>
+  <div class="body-output-tiket">
+    <p class="output-tiket-movie" id="output-tiket-movie">Movie : Nama Movie</p>
+    <p class="output-studio-tiket" id="output-studio-tiket">Studio : studio nomer</p>
+    <p class="output-seat-tiket" id="output-seat-tiket">Seats : nomer kursi</p>
+    <p class="output-time-tiket" id="output-time-tiket">Time : Jam movie</p>
+  </div>
+  <button class="output-tiket-home" id="output-tiket-home">Kembali ke beranda</button>
+
+</div>
+<!-- akhir section tiket -->
 
 
     <!-- awal section cinema -->
@@ -248,7 +205,8 @@
       <div class="container-totalharga">
         <div class="total-submit-container">
           <div class="total-harga">
-            <p>banyak kursi x harga per kursi</p>
+            <p id="total-harga-detail">0 x 0</p>
+            <p id="total-harga-total">Rp 0</p>
           </div>
           <button class="submit-total-harga" id="submit-final">submit</button>
           <button class="submit-total-harga" id="cancel-tiket">cancel</button>
@@ -278,7 +236,7 @@
     
 
     <!-- awal section output tiket -->
-    <div class="container-output-ticket" id="container-output-ticket">
+    <!-- <div class="container-output-ticket" id="container-output-ticket">
       <div class="header-output-tiket">
         <p>Terimakasih telah memesan tiket di bioskop Nabhan</p>
         <p>Mohon menghubungi resepsionis untuk menukar tiket</p>
@@ -299,7 +257,7 @@
       <p class="output-time-tiket">Time : Jam movie</p>
     </div>
     <button class="output-tiket-home">Kembali ke beranda</button>
-  </div>
+  </div> -->
   <!-- akhir section tiket -->
 
   <script src="index.js"></script>

@@ -4,28 +4,42 @@
   max-width: 99vw;
 }
 
+body {
+  background-image: linear-gradient(126deg, rgba(101, 101, 101, 0.09) 0%, rgba(101, 101, 101, 0.09) 68%, rgba(200, 200, 200, 0.09) 68%, rgba(200, 200, 200, 0.09) 100%),
+    linear-gradient(164deg, rgba(238, 238, 238, 0.03) 0%, rgba(238, 238, 238, 0.03) 90%, rgba(14, 14, 14, 0.03) 90%, rgba(14, 14, 14, 0.03) 100%),
+    linear-gradient(27deg, rgba(214, 214, 214, 0.04) 0%, rgba(214, 214, 214, 0.04) 34%, rgba(104, 104, 104, 0.04) 34%, rgba(104, 104, 104, 0.04) 100%),
+    linear-gradient(175deg, rgba(20, 20, 20, 0.01) 0%, rgba(20, 20, 20, 0.01) 4%, rgba(9, 9, 9, 0.01) 4%, rgba(9, 9, 9, 0.01) 100%),
+    linear-gradient(257deg, rgba(14, 14, 14, 0.01) 0%, rgba(14, 14, 14, 0.01) 28%, rgba(164, 164, 164, 0.01) 28%, rgba(164, 164, 164, 0.01) 100%),
+    linear-gradient(311deg, rgba(68, 68, 68, 0.07) 0%, rgba(68, 68, 68, 0.07) 33%, rgba(213, 213, 213, 0.07) 33%, rgba(213, 213, 213, 0.07) 100%),
+    linear-gradient(244deg, rgba(43, 43, 43, 0.02) 0%, rgba(43, 43, 43, 0.02) 80%, rgba(161, 161, 161, 0.02) 80%, rgba(161, 161, 161, 0.02) 100%),
+    linear-gradient(130deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.04) 49%, rgba(105, 105, 105, 0.04) 49%, rgba(105, 105, 105, 0.04) 100%), linear-gradient(90deg, rgb(190, 33, 111), rgb(97, 3, 0));
+}
 
+h1,
+h2,
+h3 {
+  color: aquamarine;
+}
 
-.navbar{
+.navbar {
   text-align: center;
   font-size: 1.5rem;
   margin: 0%;
   padding: 0%;
   display: flex;
   font-size: 30px;
-
-  background-color: slategrey;
+  background-image: linear-gradient(45deg, transparent 0%, transparent 55%,rgba(64, 64, 64,0.04) 55%, rgba(64, 64, 64,0.04) 76%,transparent 76%, transparent 100%),linear-gradient(135deg, transparent 0%, transparent 14%,rgba(64, 64, 64,0.04) 14%, rgba(64, 64, 64,0.04) 41%,transparent 41%, transparent 100%),linear-gradient(45deg, transparent 0%, transparent 2%,rgba(64, 64, 64,0.04) 2%, rgba(64, 64, 64,0.04) 18%,transparent 18%, transparent 100%),linear-gradient(135deg, transparent 0%, transparent 61%,rgba(64, 64, 64,0.04) 61%, rgba(64, 64, 64,0.04) 71%,transparent 71%, transparent 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+  /* background-color: slategrey; */
   /* background-color: blueviolet; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#navbarNavAltMarkup{
-  font-family: 'Pacifico', cursive;
+#navbarNavAltMarkup {
+  font-family: "Pacifico", cursive;
 }
 
-
-.logo{
-width: 100px;
+.logo {
+  width: 100px;
 }
 .cards {
   display: flex;
@@ -47,14 +61,12 @@ width: 100px;
 }
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvv awal */
-.container-upcoming-movie{
+.container-upcoming-movie {
   width: 100vw;
   height: 80vh;
-  background-color: mediumaquamarine;
- 
+  /* background-color: mediumaquamarine; */
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir */
-
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvv awal */
 /* * {box-sizing:border-box} */
@@ -75,15 +87,14 @@ width: 100px;
   display: none;
   object-fit: contain;
   max-height: 60vh;
-
 }
 
-.tengah-carousel{
+.tengah-carousel {
   display: flex;
   justify-content: center;
 }
 
-.carousel-movie{
+.carousel-movie {
   max-width: 70vw;
   max-height: 50vh;
   /* height: 200px; */
@@ -94,14 +105,15 @@ width: 100px;
   align-self: center;
 }
 
-.container-carousel{
+.container-carousel {
   max-height: 100vh;
   /* display: block; */
-  background-color: mediumpurple;
-  margin-top: 8vh;
+  /* background-color: mediumpurple; */
+  margin-top: 6vh;
 }
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -123,8 +135,9 @@ width: 100px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -159,7 +172,8 @@ width: 100px;
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -172,34 +186,41 @@ width: 100px;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-
-}
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir */
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvv awal ongoing movie */
-.nowplaying-movie{
+.nowplaying-movie {
   text-align: center;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2vh;
 }
-.container-ongoing-movie{
+.container-ongoing-movie {
+  margin-bottom: 150px;
   max-width: 99vw;
   min-height: 10vh;
-  height: 50vh;
+  height: 30vh;
   /* height: auto; */
   padding-right: 3vw;
-  background-color: mediumaquamarine;
+  /* background-color: mediumaquamarine; */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -208,31 +229,30 @@ width: 100px;
   align-items: center;
 }
 
-  .kartu-ongoing-movie{
-    width: 15vh;
-    height: 20vh;
-    background-color: darkseagreen;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-  }
+.kartu-ongoing-movie {
+  width: 15vh;
+  height: 20vh;
+  /* background-color: darkseagreen; */
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
 
-  .kartu-ongoing-movie img{
-    max-width: 20vh;
-    
-  }
+.kartu-ongoing-movie img {
+  max-width: 20vh;
+}
 
-  .title-kartu-movie{
-    font-size: 1.4rem;
-    text-align: center;
-  }
+.title-kartu-movie {
+  font-size: 1.4rem;
+  text-align: center;
+}
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir ongoing movie */
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvv awal section pilih movie */
 
-.container-pilih-movie{
+.container-pilih-movie {
   width: 100%;
   height: 95vh;
-  background-color: lightsalmon;
+  /* background-color: lightsalmon; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,87 +260,185 @@ width: 100px;
   flex-wrap: wrap;
 }
 
-  .deskripsi-pilih-movie{
-    height: 75%;
-    width: 30%;
-    min-width: 250px;
-    background-color: linen;
-    text-align: center;
-  }
+.deskripsi-pilih-movie {
+  height: 75%;
+  width: 30%;
+  min-width: 250px;
+  background-color: rgba(24, 22, 27, 0.534);
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-    .deskripsi-pilih-movie h2{
-      margin-top: 6%;
-      margin-bottom: 4%;
-    } 
-    .deskripsi-pilih-movie p{
-      /* background-color: magenta; */
-      width: 84%;
-      margin-left: 8%;
-      margin-right: 8%;
-      text-align: justify;
-    } 
+.deskripsi-pilih-movie p {
+  background-color: rgba(252, 252, 252, 0);
+  color: white;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: "Montagu Slab", serif;
+}
 
-  .poster-pilih-movie{
-    height: 75%;
-    min-width: 250px;
-    width: 30%;
-    background-color: linen;
-    display: flex;
-  }
+.kartu-ongoing-movie h3 {
+  margin-top: 20px;
+  margin-left: 22px;
+  font-family: "Montagu Slab", serif;
+}
 
-    .poster-movie-terpilih{
-      width: 100%;
-      height: auto;
-      align-items: center;
-      align-self: center;
-      align-content: center ;
-    }
+.list-playing {
+  list-style-type: none;
+}
 
-  .detail-pilih-movie{
-    height: 75%;
-    min-width: 250px;
-    width: 30%;
-    background-color: linen;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-  }
+.deskripsi-pilih-movie h2 {
+  margin-top: 6%;
+  margin-bottom: 4%;
+}
+.deskripsi-pilih-movie p {
+  /* background-color: magenta; */
+  min-width: 80%;
+  margin-left: 8%;
+  min-height: 20%;
+  margin-right: 8%;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: justify;
+  /* align-content: center; */
+}
 
-    .detail-pilih-movie .dropdown{
-      /* width: 80%; */
-    }
+.poster-pilih-movie {
+  height: 75%;
+  min-width: 250px;
+  width: 30%;
+  background-color: rgba(24, 22, 27, 0.534);
+  display: flex;
+}
+
+.poster-movie-terpilih {
+  width: 100%;
+  height: auto;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
+.detail-pilih-movie {
+  color: white;
+  height: 75%;
+  min-width: 250px;
+  width: 30%;
+  background-color: rgba(24, 22, 27, 0.534);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.detail-pilih-movie a {
+  color: aquamarine;
+}
+
+.detail-pilih-movie .dropdown {
+  /* width: 80%; */
+}
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir section pilih movie */
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvv awal section cinema */
-.container-cinema{
+.container-cinema {
   width: 100vw;
   height: 115vh;
-  background-color: coral;
+  /* background-color: royalblue; */
+  background-image: linear-gradient(
+      74deg,
+      rgba(246, 246, 246, 0.03) 0%,
+      rgba(246, 246, 246, 0.03) 4%,
+      rgba(152, 152, 152, 0.03) 4%,
+      rgba(152, 152, 152, 0.03) 32%,
+      rgba(123, 123, 123, 0.03) 32%,
+      rgba(123, 123, 123, 0.03) 41%,
+      rgba(189, 189, 189, 0.03) 41%,
+      rgba(189, 189, 189, 0.03) 45%,
+      rgba(151, 151, 151, 0.03) 45%,
+      rgba(151, 151, 151, 0.03) 47%,
+      rgba(61, 61, 61, 0.03) 47%,
+      rgba(61, 61, 61, 0.03) 77%,
+      rgba(34, 34, 34, 0.03) 77%,
+      rgba(34, 34, 34, 0.03) 100%
+    ),
+    linear-gradient(
+      117deg,
+      rgba(222, 222, 222, 0.03) 0%,
+      rgba(222, 222, 222, 0.03) 7%,
+      rgba(67, 67, 67, 0.03) 7%,
+      rgba(67, 67, 67, 0.03) 18%,
+      rgba(61, 61, 61, 0.03) 18%,
+      rgba(61, 61, 61, 0.03) 26%,
+      rgba(32, 32, 32, 0.03) 26%,
+      rgba(32, 32, 32, 0.03) 52%,
+      rgba(119, 119, 119, 0.03) 52%,
+      rgba(119, 119, 119, 0.03) 60%,
+      rgba(252, 252, 252, 0.03) 60%,
+      rgba(252, 252, 252, 0.03) 68%,
+      rgba(9, 9, 9, 0.03) 68%,
+      rgba(9, 9, 9, 0.03) 100%
+    ),
+    linear-gradient(
+      313deg,
+      rgba(193, 193, 193, 0.03) 0%,
+      rgba(193, 193, 193, 0.03) 12%,
+      rgba(184, 184, 184, 0.03) 12%,
+      rgba(184, 184, 184, 0.03) 24%,
+      rgba(194, 194, 194, 0.03) 24%,
+      rgba(194, 194, 194, 0.03) 43%,
+      rgba(128, 128, 128, 0.03) 43%,
+      rgba(128, 128, 128, 0.03) 54%,
+      rgba(87, 87, 87, 0.03) 54%,
+      rgba(87, 87, 87, 0.03) 71%,
+      rgba(169, 169, 169, 0.03) 71%,
+      rgba(169, 169, 169, 0.03) 93%,
+      rgba(83, 83, 83, 0.03) 93%,
+      rgba(83, 83, 83, 0.03) 100%
+    ),
+    linear-gradient(
+      19deg,
+      rgba(186, 186, 186, 0.03) 0%,
+      rgba(186, 186, 186, 0.03) 9%,
+      rgba(77, 77, 77, 0.03) 9%,
+      rgba(77, 77, 77, 0.03) 19%,
+      rgba(38, 38, 38, 0.03) 19%,
+      rgba(38, 38, 38, 0.03) 27%,
+      rgba(203, 203, 203, 0.03) 27%,
+      rgba(203, 203, 203, 0.03) 39%,
+      rgba(130, 130, 130, 0.03) 39%,
+      rgba(130, 130, 130, 0.03) 43%,
+      rgba(184, 184, 184, 0.03) 43%,
+      rgba(184, 184, 184, 0.03) 81%,
+      rgba(108, 108, 108, 0.03) 81%,
+      rgba(108, 108, 108, 0.03) 100%
+    ),
+    linear-gradient(90deg, rgb(107, 4, 15), rgb(240, 4, 35));
   padding-top: 3vh;
 }
 
-.layar{
+.layar {
   width: 76vw;
   height: 8vh;
   background-color: black;
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 12vh;
+  border-radius: 35% 45% 10% 10%;
 }
 
-.container-kursi{
+.container-kursi {
   width: 76vw;
   height: 70vh;
-  background-color: rgb(107, 68, 68);
+  background-color: rgba(131, 29, 29, 0.781);
   margin-left: 10vw;
   margin-right: 10vw;
-  
 }
 
-.row-kursi{
+.row-kursi {
   display: flex;
   height: auto;
   width: 100%;
@@ -329,102 +447,107 @@ width: 100px;
   margin: 0px;
 }
 
-.kursi{
+.kursi {
   width: 10vw;
   height: 8vh;
-  background-color: cadetblue;
+  background-color: rgba(95, 158, 160, 0.397);
   margin-bottom: 2vh;
   border-radius: 10% 10% 40% 40%;
 }
 
-
-.checkout-container{
-text-align: center;
-background-color: coral;
-stroke: black;
+.checkout-container {
+  text-align: center;
+  padding-left: 2vw;
+  /* background-color: rgba(216, 222, 228, 0.219); */
+  /* background-color: rgba(24, 22, 27, 0.534); */
+  stroke: black;
 }
 
-
-.container-totalharga{
+.container-totalharga {
   width: 76vw;
   height: 20vh;
+  padding-top: 2vh;
   margin-left: 10vw;
   margin-right: 10vw;
-  background-color: cornflowerblue;
+  padding-left: 2vw;
+  /* background-color: rgba(155, 181, 228, 0); */
+  background-color: rgba(24, 22, 27, 0.534);
   display: flex;
   justify-content: space-between;
 }
 
-.total-harga{
+.container-totalharga p {
+  color: antiquewhite;
+}
+
+.total-harga {
   height: auto;
   width: 30vw;
   padding: 2%;
-  background-color: darkgray;
+  /* background-color: darkgray; */
   text-align: center;
 }
 
-.submit-total-harga{
+.submit-total-harga {
   margin: 2%;
   width: 10vw;
   padding: 1.5%;
+  background-color: rgba(103, 39, 163, 0.568);
+  color: aliceblue;
+  border-radius: 7%;
 }
 
-.metode-pembayaran-container{
+.metode-pembayaran-container {
   width: 40vw;
   height: 80%;
-  background-color: darkkhaki;
+  padding-right: 2vw;
+  /* background-color: darkkhaki; */
+  /* background-color: rgba(24, 22, 27, 0.534); */
 }
 
-.metode-pembayaran-icon{
+.metode-pembayaran-icon {
   height: 20%;
   width: auto;
   min-width: 10%;
   max-width: 15%;
 }
 
-.visa{
-  height: 100%;
-  width: 100%;
-  display: block;
-  background-color: darkorange;
-}
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir cinema kursi */
 
-
-.book{
+.book {
   text-align: center;
-  text-decoration-color: blueviolet;
+  text-decoration-color: rgba(137, 43, 226, 0.137);
 }
 
-.email{
+.email {
   text-align: center;
-} 
-
+}
 
 /* awal output tiket area */
-.container-output-ticket{
+.container-output-ticket {
   width: 100vw;
   height: 100vh;
   /* min-height: 80vh; */
   /* max-width: 100vw; */
-  background-color: darksalmon;
+  /* background-color: rgba(219, 116, 82, 0.63); */
   text-align: center;
-  
 }
 
-.header-output-tiket{
+.header-output-tiket {
   /* margin-top: 10%; */
   padding-top: 2%;
   font-size: 2.8rem;
 }
 
-.header-output-tiket p{
+.header-output-tiket p {
   margin: 0px;
   padding: 0px;
+  color: aliceblue;
 }
 
-.body-output-tiket{
-  background-color: cyan;
+.body-output-tiket {
+  /* background-color: rgba(95, 121, 143, 0.678); */
+  background-color: rgba(24, 22, 27, 0.534);
   width: 70%;
   margin-left: 15%;
   margin-right: 15%;
@@ -434,24 +557,42 @@ stroke: black;
   margin-top: 3%;
 }
 
-.body-output-tiket p{
+.body-output-tiket p {
   font-size: 2.6rem;
+  color: aliceblue;
 }
 
-.output-tiket-home{
+.output-tiket-home {
   height: 8vh;
   width: 12 vw;
 }
 /* akhir output tiket area */
 
 /* misc */
-.separator-section{
+.separator-section {
   height: 4vh;
   width: 60vw;
   margin-left: 19vw;
   margin-right: 19vw;
   margin-top: 5vh;
   margin-bottom: 5vh;
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
   font-size: 5rem;
+}
+
+.output-tiket-home {
+  margin: 2%;
+  width: 10vw;
+  padding: 1.5%;
+  background-color: rgba(103, 39, 163, 0.568);
+  color: aliceblue;
+  border-radius: 7%;
+}
+
+.judul-pilih-movie {
+  margin-top: 100px;
+}
+
+.white {
+  color: white;
 }
