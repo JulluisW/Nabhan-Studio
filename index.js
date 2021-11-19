@@ -70,6 +70,10 @@ const labelJam = document.getElementById("label_jam");
 const inputDataFilm = document.getElementById("input_dataFilm");
 const bookingForm = document.getElementById("booking-form");
 const emailInput = document.getElementById("input_email");
+const submitSeat = document.getElementById("submit-final");
+const cancelSeat = document.getElementById("cancel-tiket");
+const inputPembayaran = document.getElementById("input_pembayaran");
+const kembaliBeranda = document.getElementById("output-tiket-home")
 
 function pilihFilm() {
   for (const movie of kumpulanFilm) {
@@ -118,10 +122,14 @@ inputDataFilm.addEventListener("click", function () {
     alert("Data belum lengkap!");
   } else {
     tampilkanKursi();
-    pesanFilm(emailInput.value, dataFilm, dataTheater, dataJam);
+    localStorage.setItem("email", emailInput.value);
+    localStorage.setItem("film", dataFilm);
+    localStorage.setItem("theater", dataTheater);
+    localStorage.setItem("jam", dataJam);
     // console.log(dataFilm, dataTheater, dataJam);
     document.getElementById("container-pilih-movie").classList = "d-none";
     inputDataFilm.for = "container-cinema";
+    document.getElementById("container-cinema").classList.remove("d-none");
     // console.log(emailInput.value);
   }
 });
@@ -184,6 +192,7 @@ function tampilkanKursi() {
 
 let totalHarga = 0;
 let jumlahKursi = 0;
+let seats = {};
 
 function fungsiKursi(namaKolom) {
   console.log(namaKolom);
@@ -191,23 +200,47 @@ function fungsiKursi(namaKolom) {
     document.getElementById(namaKolom).classList.remove("bg-light");
     totalHarga -= 50000;
     jumlahKursi--;
+    delete seats[namaKolom];
     // document.getElementById(namaKolom).classList = "kelas"
   } else {
     document.getElementById(namaKolom).classList += " bg-light";
     totalHarga += 50000;
     jumlahKursi++;
+    seats[namaKolom] = 1;
   }
 }
 
-function pesanFilm(dataEmail, dataFilm, dataTheater, dataJam) {
-  const output = {
-    email: dataEmail,
-    film: dataFilm,
-    theater: dataTheater,
-    jam: dataJam,
-  };
-  return output;
-}
+submitSeat.addEventListener("click", function () {
+  let metodePembayaran = inputPembayaran.options[inputPembayaran.selectedIndex].value;
+  if (metodePembayaran == "Pilih") {
+    alert("Mohon pilih metode pembayaran!");
+  } else if (jumlahKursi == 0) {
+    alert("Mohon pilih kursi!");
+  } else {
+    const email = localStorage.getItem("email");
+    const film = localStorage.getItem("film");
+    const theater = localStorage.getItem("theater");
+    const jam = localStorage.getItem("jam");
+    submitSeat.for = "container-output-ticket";
+    document.getElementById("container-cinema").classList += " d-none";
+    document.getElementById("container-output-ticket").classList.remove("d-none");
+    document.getElementById("output-tiket-movie").innerText = `Movie : ${film}`;
+    document.getElementById("output-studio-tiket").innerText = `Studio : ${theater}`;
+    for(const key in seats) {
+      document.getElementById("output-seat-tiket").innerText = `Seats : ${key}`;
+    }
+    document.getElementById("output-time-tiket").innerText = `Time : ${jam}`;
+  }
+});
+
+cancelSeat.addEventListener("click", function () {
+  document.location.reload();
+  localStorage.clear();
+});
+
+kembaliBeranda.addEventListener("click",function() {
+  location.reload();
+})
 
 
 var slideIndex = 1;

@@ -176,6 +176,7 @@
 
   <!-- awal section pilih movie -->
 
+
   <div class="container-pilih-movie" id="container-pilih-movie">
     <div class="deskripsi-pilih-movie">
       <h2 class="judul-pilih-movie" id="judul-pilih-movie">Movie Title</h2>
@@ -202,6 +203,9 @@
         <select class="form-select mb-5 d-none" id="input_theater" aria-label="Default select example">
           <option selected>Pilih</option>
         </select>
+
+   
+
 
         <label class="d-none" id="label_jam" for="input_jam">Movie</label>
         <select class="form-select mb-5 d-none" id="input_jam" aria-label="Default select example">
@@ -230,24 +234,38 @@
 
   <!-- akhir section pilih movie -->
 
-  <!-- awal section cinema -->
-  <div class="container-cinema" id="container-cinema">
-    <div class="layar"></div>
+
+
+    <!-- awal section cinema -->
+    <div class="container-cinema d-none" id="container-cinema">
+      <div class="layar"></div>
+
 
     <div class="container-kursi" id="kontainerKursi"></div>
 
-    <div class="container-totalharga">
-      <div class="total-submit-container">
-        <div class="total-harga">
-          <p>banyak kursi x harga per kursi</p>
-        </div>
-        <button class="submit-total-harga">submit</button>
-        <button class="submit-total-harga">cancel</button>
+
+
+      <div class="container-totalharga">
+        <div class="total-submit-container">
+          <div class="total-harga">
+            <p>banyak kursi x harga per kursi</p>
+          </div>
+          <button class="submit-total-harga" id="submit-final">submit</button>
+          <button class="submit-total-harga" id="cancel-tiket">cancel</button>
+
+        
       </div>
 
-      <div class="checkout-container">
-        <div class="metode-pembayaran-container">
-          <p class="metode-pembayaran">Metode pembayaran :</p>
+        <div class="checkout-container">
+          <div class="metode-pembayaran-container">
+            <p class="metode-pembayaran">Metode pembayaran :</p>
+            <select class="form-select mb-5" id="input_pembayaran" aria-label="Default select example">
+              <option selected>Pilih</option>
+              <option value="">Bopay</option>
+              <option value="">OPO</option>
+              <option value="">Gana</option>
+          </div>
+
         </div>
       </div>
     </div>
@@ -256,11 +274,23 @@
 
   <div class="separator-section"></div>
 
-  <!-- awal section output tiket -->
-  <div class="container-output-ticket">
-    <div class="header-output-tiket">
-      <p>Terimakasih telah memesan tiket di bioskop Nabhan</p>
-      <p>Mohon menghubungi resepsionis untuk menukar tiket</p>
+
+    
+
+    <!-- awal section output tiket -->
+    <div class="container-output-ticket" id="container-output-ticket">
+      <div class="header-output-tiket">
+        <p>Terimakasih telah memesan tiket di bioskop Nabhan</p>
+        <p>Mohon menghubungi resepsionis untuk menukar tiket</p>
+      </div>
+      <div class="body-output-tiket">
+        <p class="output-tiket-movie" id="output-tiket-movie">Movie : Nama Movie</p>
+        <p class="output-studio-tiket" id="output-studio-tiket">Studio : studio nomer</p>
+        <p class="output-seat-tiket" id="output-seat-tiket">Seats : nomer kursi</p>
+        <p class="output-time-tiket" id="output-time-tiket">Time : Jam movie</p>
+      </div>
+      <button class="output-tiket-home" id="output-tiket-home">Kembali ke beranda</button>
+
     </div>
     <div class="body-output-tiket">
       <p class="output-tiket-movie">Movie : Nama Movie</p>
