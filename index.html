@@ -5,35 +5,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
   <title>index page</title>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Nabhan Cinema</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Upcoming Movie</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Book now!</a>
-        </li>
-        
-      </ul>
-    </div>
-  </nav>
-  
+
+  <header>
+    <nav class="navbar navbar-light bg-slategrey">
+      <div class="container-fluid">
+        <img src="./img/logopop.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
+        Bootstrap
+      </div>
+    </nav>
+  </header>
 
   <div class="container text-center">
     <div class="row">
@@ -76,14 +64,6 @@
     </div>
   </div>
 
-  <header>
-    <nav class="navbar navbar-light bg-slategrey">
-      <div class="container-fluid">
-        <img src="./img/logopop.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
-        Bootstrap
-      </div>
-    </nav>
-  </header>
 
 
 
@@ -103,14 +83,11 @@
       </div>
     </div>
 
-
-    <div class=" upcoming-movie">
-    </div>
-
+    
     <div class="input-group mb-3">
       <input type="text" class="form-control" aria-label="Text input with dropdown button">
       <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-        aria-expanded="false">Dropdown</button>
+      aria-expanded="false">Dropdown</button>
       <ul class="dropdown-menu dropdown-menu-end">
         <li><a class="dropdown-item" href="#">Venom</a></li>
         <li><a class="dropdown-item" href="#">Sapiderman</a></li>
@@ -118,101 +95,105 @@
       </ul>
     </div>
   </div>
+  
+  
+  <!-- awal upcoming movie -->
+  <div class="container-upcoming-movie">
+    
+  </div>
+  <!-- akhir upcoming movie -->
+
+  <!-- awal section pilih movie -->
+
+  <div class="container-pilih-movie">
+    <div class="deskripsi-pilih-movie">
+      <h2 class="judul-pilih-movie"> Movie Title</h2>
+      <p class="deskripsi-pilih-movie">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dolorum atque quos
+        in architecto aliquid iste, placeat suscipit praesentium repellat dolores sed, officiis nisi quo deserunt magnam
+        nulla, quis unde?</p>
+    </div>
+    <div class="poster-pilih-movie">
+      <img src="#" alt="movie yang akan ditonton" class="poster-movie-terpilih">
+    </div>
+    <div class="detail-pilih-movie">
+      <div class="input-email-pembeli">
+        <!-- <label for="email">Enter your email:</label> -->
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+      </div>
+      <br>
+      <div class="dropdown mb-4">
+        <button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Movie
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+
+      <div class="dropdown mb-4">
+        <button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Studio
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+
+      <div class="dropdown mb-4">
+        <button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Jadwal
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary">Submit</button>
+      <!-- <button class="dropdown-pilih-movie"> Dropdown </button> -->
+
+      <!-- <div class="dropdown-pilih-movie">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="container-form-detail-pilih-movie">
+      
+      </div> -->
+
+    </div>
+  </div>
+
+  <!-- akhir section pilih movie -->
 
 
+  <!-- awal section cinema -->
   <div class="container-cinema">
     <div class="layar"></div>
 
+    <div class="container-kursi" id="kontainerKursi">
+    </div>
 
-    <div class="container-kursi">
-      <div class="row-kursi">
-
-        <button class="kursi">a1</button>
-        <button class="kursi">a2</button>
-        <button class="kursi">a3</button>
-        <button class="kursi">a4</button>
-        <button class="kursi">a5</button>
-        <button class="kursi">a6</button>
-
-
-      </div>
-
-      <div class="row-kursi">
-
-        <button class="kursi">b1</button>
-        <button class="kursi">b2</button>
-        <button class="kursi">b3</button>
-        <button class="kursi">b4</button>
-        <button class="kursi">b5</button>
-        <button class="kursi">b6</button>
-
-      </div>
-
-      <div class="row-kursi">
-
-        <button class="kursi">c1</button>
-        <button class="kursi">c2</button>
-        <button class="kursi">c3</button>
-        <button class="kursi">c4</button>
-        <button class="kursi">c5</button>
-        <button class="kursi">c6</button>
-
-      </div>
-
-      <div class="row-kursi">
-
-        <button class="kursi">d1</button>
-        <button class="kursi">d2</button>
-        <button class="kursi">d3</button>
-        <button class="kursi">d4</button>
-        <button class="kursi">d5</button>
-        <button class="kursi">d6</button>
-
-      </div>
-
-
-      <div class="container-kursi" id="kontainerKursi">
-
-      </div>
-
-
-      <div class="container-totalharga">
-        <div class="total-submit-container">
-          <div class="total-harga">
-            <p>banyak kursi x harga per kursi</p>
-          </div>
-          <button class="submit-total-harga">submit</button>
-
-
-          <button class="kursi">f1</button>
-          <button class="kursi">f2</button>
-          <button class="kursi">f3</button>
-          <button class="kursi">f4</button>
-          <button class="kursi">f5</button>
-          <button class="kursi">f6</button>
-
+    <div class="container-totalharga">
+      <div class="total-submit-container">
+        <div class="total-harga">
+          <p>banyak kursi x harga per kursi</p>
         </div>
-
-        <div class="row-kursi">
-
-          <button class="kursi">g1</button>
-          <button class="kursi">g2</button>
-          <button class="kursi">g3</button>
-          <button class="kursi">g4</button>
-          <button class="kursi">g5</button>
-          <button class="kursi">g6</button>
-
-        </div>
+        <button class="submit-total-harga">submit</button>
       </div>
 
       <div class="checkout-container">
-        <div class="header">
-          <p>Terimakasih</p>
-          <p>Mohon tukar</p>
-        </div>
-        <div class="object-pemesanan">
-
-        </div>
 
         <div class="metode-pembayaran-container">
           <p class="metode-pembayaran">Metode pembayaran :</p>
@@ -227,64 +208,57 @@
           </button>
         </div>
       </div>
+    </div>
+  </div>
+  <!-- akhir section cinema -->
+
+  <div class="separator-section"> </div>
 
 
-      <div class="checkout-container">
-        <div class="header">
-          <p>Terimakasih</p>
-          <p>Mohon tukar</p>
-        </div>
-        <div class="object-pemesanan">
+  <div class="book" id="booking-form">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
 
+    <label for="input_film">Movie</label>
+    <select class="form-select mb-5" id="input_film" aria-label="Default select example">
+      <option selected>Select your movie</option>
+    </select>
 
-        </div>
-      </div>
+    <label class="d-none" id="label_theater" for="input_theater">Movie</label>
+    <select class="form-select mb-5 d-none" id="input_theater" aria-label="Default select example">
+      <option selected>Select your theater</option>
+    </select>
 
+    <label class="d-none" id="label_jam" for="input_jam">Movie</label>
+    <select class="form-select mb-5 d-none" id="input_jam" aria-label="Default select example">
+      <option selected>Select your schedule</option>
+    </select>
 
-      <div class="book" id="booking-form">
-        <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="submit" id="input_dataFilm">
 
-        <label for="input_film">Movie</label>
-        <select class="form-select mb-5" id="input_film" aria-label="Default select example">
-          <option selected>Select your movie</option>
-        </select>
+  </div>
 
-        <label class="d-none" id="label_theater" for="input_theater">Movie</label>
-        <select class="form-select mb-5 d-none" id="input_theater" aria-label="Default select example">
-          <option selected>Select your theater</option>
-        </select>
+  <!-- awal section output tiket -->
+  <div class="container-output-ticket">
+    <div class="header-output-tiket">
+      <p>Terimakasih telah memesan tiket di bioskop Nabhan</p>
+      <p>Mohon menghubungi resepsionis untuk menukar tiket</p>
+    </div>
+    <div class="body-output-tiket">
+      <p class="output-tiket-movie">Movie : Nama Movie</p>
+      <p class="output-studio-tiket">Studio : studio nomer</p>
+      <p class="output-seat-tiket">Seats : nomer kursi</p>
+      <p class="output-time-tiket">Time : Jam movie</p>
+    </div>
+    <button class="output-tiket-home">Kembali ke beranda</button>
+  </div>
+  <!-- akhir section tiket -->
 
-        <label class="d-none" id="label_jam" for="input_jam">Movie</label>
-        <select class="form-select mb-5 d-none" id="input_jam" aria-label="Default select example">
-          <option selected>Select your schedule</option>
-        </select>
+  <script src="index.js"></script>
 
-        <input type="submit" id="input_dataFilm">
-
-      </div>
-
-
-      <div class="container-output-ticket">
-        <div class="header-output-tiket">
-          <p>Terimakasih telah memesan tiket di bioskop Nabhan</p>
-          <p>Mohon menghubungi resepsionis untuk menukar tiket</p>
-        </div>
-        <div class="body-output-tiket">
-          <p class="output-tiket-movie">Movie : Nama Movie</p>
-          <p class="output-studio-tiket">Studio : studio nomer</p>
-          <p class="output-seat-tiket">Seats : nomer kursi</p>
-          <p class="output-time-tiket">Time : Jam movie</p>
-        </div>
-        <button class="output-tiket-home">Kembali ke beranda</button>
-      </div>
-
-
-      <script src="index.js"></script>
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 
 </body>
 

@@ -1,6 +1,7 @@
 * {
   margin: 0%;
   padding: 0%;
+  max-width: 99vw;
 }
 
 
@@ -42,11 +43,78 @@ width: 100px;
   border-radius: 10px;
 }
 
+/* vvvvvvvvvvvvvvvvvvvvvvvvvv awal */
+.container-upcoming-movie{
+  width: 100vw;
+  height: 80vh;
+  background-color: mediumaquamarine;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir */
+
+/* vvvvvvvvvvvvvvvvvvvvvvvvvv awal upcoming movie */
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir upcoming movie */
+
+/* vvvvvvvvvvvvvvvvvvvvvvvvvv awal section pilih movie */
+
+.container-pilih-movie{
+  width: 100%;
+  height: 95vh;
+  background-color: lightsalmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2%;
+}
+
+  .deskripsi-pilih-movie{
+    height: 75%;
+    width: 30%;
+    background-color: linen;
+    text-align: center;
+  }
+
+    .deskripsi-pilih-movie h2{
+      margin-top: 6%;
+      margin-bottom: 4%;
+    } 
+    .deskripsi-pilih-movie p{
+      /* background-color: magenta; */
+      width: 84%;
+      margin-left: 8%;
+      margin-right: 8%;
+      text-align: justify;
+    } 
+
+  .poster-pilih-movie{
+    height: 75%;
+    width: 30%;
+    background-color: linen;
+  }
+
+  .detail-pilih-movie{
+    height: 75%;
+    width: 30%;
+    background-color: linen;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+    .detail-pilih-movie .dropdown{
+      /* width: 80%; */
+    }
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir section pilih movie */
+
+/* vvvvvvvvvvvvvvvvvvvvvvvvvv awal section cinema */
 .container-cinema{
   width: 100vw;
-  height: 100vh;
+  height: 115vh;
   background-color: coral;
-  padding-top: 8vh;
+  padding-top: 3vh;
 }
 
 .layar{
@@ -91,13 +159,6 @@ background-color: coral;
 stroke: black;
 }
 
-.book{
-  text-align: center;
-  text-decoration-color: blueviolet;
-}
-
-.email{
-  text-align: center;
 
 .container-totalharga{
   width: 76vw;
@@ -142,12 +203,25 @@ stroke: black;
   display: block;
   background-color: darkorange;
 }
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir cinema kursi */
 
+
+.book{
+  text-align: center;
+  text-decoration-color: blueviolet;
+}
+
+.email{
+  text-align: center;
+} 
+
+
+/* awal output tiket area */
 .container-output-ticket{
   width: 100vw;
-  height: auto;
-  min-height: 80vh;
-  max-width: 100vw;
+  height: 100vh;
+  /* min-height: 80vh; */
+  /* max-width: 100vw; */
   background-color: darksalmon;
   text-align: center;
   
@@ -182,4 +256,17 @@ stroke: black;
 .output-tiket-home{
   height: 8vh;
   width: 12 vw;
+}
+/* akhir output tiket area */
+
+/* misc */
+.separator-section{
+  height: 4vh;
+  width: 60vw;
+  margin-left: 19vw;
+  margin-right: 19vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  background-color: cornflowerblue;
+  font-size: 5rem;
 }
