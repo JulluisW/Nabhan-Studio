@@ -52,7 +52,17 @@ width: 100px;
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir */
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvv awal upcoming movie */
+.container-ongoing-movie{
+  width: 100vw;
+  height: 80vh;
+  background-color: mediumaquamarine;
+}
 
+  .kartu-ongoing-movie{
+    width: 15vh;
+    height: 20vh;
+    background-color: darkseagreen;
+  }
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^ akhir upcoming movie */
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvv awal section pilih movie */

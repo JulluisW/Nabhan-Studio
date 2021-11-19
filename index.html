@@ -96,11 +96,16 @@
     </div>
   </div>
   
-  
-  <!-- awal upcoming movie -->
-  <div class="container-upcoming-movie">
-    
+  <!-- awal movie -->
+  <div class="container-ongoing-movie">
+    <div class="kartu-ongoing-movie"></div>
   </div>
+  <!-- akhir movie -->
+
+  <!-- awal upcoming movie -->
+  <!-- <div class="container-upcoming-movie">
+    
+  </div> -->
   <!-- akhir upcoming movie -->
 
   <!-- awal section pilih movie -->
@@ -116,48 +121,32 @@
       <img src="#" alt="movie yang akan ditonton" class="poster-movie-terpilih">
     </div>
     <div class="detail-pilih-movie">
-      <div class="input-email-pembeli">
-        <!-- <label for="email">Enter your email:</label> -->
-        <input type="email" id="email" name="email" placeholder="Enter your email">
-      </div>
-      <br>
-      <div class="dropdown mb-4">
-        <button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Movie
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+      
+
+      <div class="book" id="booking-form">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+    
+        <label for="input_film">Movie</label>
+        <select class="form-select mb-5" id="input_film" aria-label="Default select example">
+          <option selected>Select your movie</option>
+        </select>
+    
+        <label class="d-none" id="label_theater" for="input_theater">Movie</label>
+        <select class="form-select mb-5 d-none" id="input_theater" aria-label="Default select example">
+          <option selected>Select your theater</option>
+        </select>
+    
+        <label class="d-none" id="label_jam" for="input_jam">Movie</label>
+        <select class="form-select mb-5 d-none" id="input_jam" aria-label="Default select example">
+          <option selected>Select your schedule</option>
+        </select>
+    
+        <input type="submit" id="input_dataFilm">
+    
       </div>
 
-      <div class="dropdown mb-4">
-        <button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Studio
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div>
-
-      <div class="dropdown mb-4">
-        <button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Jadwal
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div>
-
-      <button type="button" class="btn btn-primary">Submit</button>
+      <!-- <button type="button" class="btn btn-primary">Submit</button> -->
       <!-- <button class="dropdown-pilih-movie"> Dropdown </button> -->
 
       <!-- <div class="dropdown-pilih-movie">
@@ -191,21 +180,14 @@
           <p>banyak kursi x harga per kursi</p>
         </div>
         <button class="submit-total-harga">submit</button>
+        <button class="submit-total-harga">cancel</button>
       </div>
 
       <div class="checkout-container">
 
         <div class="metode-pembayaran-container">
           <p class="metode-pembayaran">Metode pembayaran :</p>
-          <button class="metode-pembayaran-icon">
-            <!-- <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/640px-Visa_Inc._logo.svg.png" alt=""> -->
-          </button>
-          <button class="metode-pembayaran-icon">
-            <!-- <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/640px-Visa_Inc._logo.svg.png" alt=""> -->
-          </button>
-          <button class="metode-pembayaran-icon">
-            <!-- <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/640px-Visa_Inc._logo.svg.png" alt=""> -->
-          </button>
+          
         </div>
       </div>
     </div>
@@ -215,28 +197,7 @@
   <div class="separator-section"> </div>
 
 
-  <div class="book" id="booking-form">
-    <label for="email">Email address</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-
-    <label for="input_film">Movie</label>
-    <select class="form-select mb-5" id="input_film" aria-label="Default select example">
-      <option selected>Select your movie</option>
-    </select>
-
-    <label class="d-none" id="label_theater" for="input_theater">Movie</label>
-    <select class="form-select mb-5 d-none" id="input_theater" aria-label="Default select example">
-      <option selected>Select your theater</option>
-    </select>
-
-    <label class="d-none" id="label_jam" for="input_jam">Movie</label>
-    <select class="form-select mb-5 d-none" id="input_jam" aria-label="Default select example">
-      <option selected>Select your schedule</option>
-    </select>
-
-    <input type="submit" id="input_dataFilm">
-
-  </div>
+  
 
   <!-- awal section output tiket -->
   <div class="container-output-ticket">
