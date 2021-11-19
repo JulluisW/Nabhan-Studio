@@ -38,7 +38,7 @@ const kumpulanFilm = [
   },
   {
     "Dilan Kembali ke Bandung": {
-      img: "https://media.21cineplex.com/webcontent/gallery/pictures/163307229284629_287x421.jpg",
+      img: "https://ultimagz.com/wp-content/uploads/dilan-91-1.png",
       sinopsis: "Eddie (Tom Hardy) yang kini sudah berteman dengan Venom berusaha hidup normal, namun masalah datang saat ia bertemu dengan Cletus Kasady (Woody Harrelson) yang diketahui sebagai inang dari symbiote dengan sebutan Carnage.",
       bioskop: [
         { theater: "Mall Paris Van Surabaya", jam: ["12:15", "15:20", "17:00"] },
@@ -50,7 +50,7 @@ const kumpulanFilm = [
   },
   {
     "Kobocan": {
-      img: "https://media.21cineplex.com/webcontent/gallery/pictures/163307229284629_287x421.jpg",
+      img: "https://s2.bukalapak.com/img/7720877431/s-330-330/Komik_Kobo_Chan_Vol10_By_Masashi_Ueda___Penerbit_Elex_Media.jpg.webp",
       sinopsis: "Eddie (Tom Hardy) yang kini sudah berteman dengan Venom berusaha hidup normal, namun masalah datang saat ia bertemu dengan Cletus Kasady (Woody Harrelson) yang diketahui sebagai inang dari symbiote dengan sebutan Carnage.",
       bioskop: [
         { theater: "Mall Paris Van Surabaya", jam: ["12:15", "15:20", "17:00"] },
@@ -61,6 +61,7 @@ const kumpulanFilm = [
   },
 ];
 
+document.getElementsByClassName("poster-movie-terpilih").src = "./img/venom.jpg"
 const inputFilm = document.getElementById("input_film");
 const inputTheater = document.getElementById("input_theater");
 // const labelTheater = document.getElementById("label_theater");
@@ -110,11 +111,11 @@ inputDataFilm.addEventListener("click", function () {
 });
 
 
-function pilihTheater (namaFilm) {
-  for(let i = 0; i < kumpulanFilm.length; i++) {
-    if(kumpulanFilm[i][namaFilm]) {
+function pilihTheater(namaFilm) {
+  for (let i = 0; i < kumpulanFilm.length; i++) {
+    if (kumpulanFilm[i][namaFilm]) {
       const teater = kumpulanFilm[i][namaFilm].bioskop
-      for(let j = 0; j < teater.length; j++) {
+      for (let j = 0; j < teater.length; j++) {
         const optionTheater = document.createElement("option");
         optionTheater.text = teater[j].theater;
         optionTheater.value = teater[j].theater;
@@ -124,14 +125,14 @@ function pilihTheater (namaFilm) {
   }
 }
 
-function pilihJam (tempat, namaFilm) {
-  for(let i = 0; i < kumpulanFilm.length; i++) {
-    if(kumpulanFilm[i][namaFilm]) {
+function pilihJam(tempat, namaFilm) {
+  for (let i = 0; i < kumpulanFilm.length; i++) {
+    if (kumpulanFilm[i][namaFilm]) {
       const teater = kumpulanFilm[i][namaFilm].bioskop
-      for(let j = 0; j < teater.length; j++) {
+      for (let j = 0; j < teater.length; j++) {
         // tampilkan jam option
-        if(teater[j].theater === tempat) {
-          for(let k = 0; k < teater[j].jam.length; k++) {
+        if (teater[j].theater === tempat) {
+          for (let k = 0; k < teater[j].jam.length; k++) {
             const optionJam = document.createElement("option");
             optionJam.text = teater[j].jam[k];
             optionJam.value = teater[j].jam[k];
@@ -145,15 +146,15 @@ function pilihJam (tempat, namaFilm) {
 
 const kontainerKursi = document.getElementById("kontainerKursi");
 function tampilkanKursi() {
-  
-  let row = ['A','B','C','D','E','F']
-  for(let i = 0; i < row.length; i++) {
+
+  let row = ['A', 'B', 'C', 'D', 'E', 'F']
+  for (let i = 0; i < row.length; i++) {
     const divBaris = document.createElement("div");
     divBaris.classList = 'row-kursi';
     divBaris.id = 'kursiBaris' + row[i];
     kontainerKursi.appendChild(divBaris);
-    for(let j = 1; j <= 6; j++) {
-      const idKursiBaris = "kursiBaris" + row[i]; 
+    for (let j = 1; j <= 6; j++) {
+      const idKursiBaris = "kursiBaris" + row[i];
       const divKursi = document.getElementById(idKursiBaris);
       const buttonKolom = document.createElement("button");
       buttonKolom.classList = 'kursi';
@@ -172,7 +173,7 @@ let jumlahKursi = 0;
 
 function fungsiKursi(namaKolom) {
   console.log(namaKolom)
-  if(document.getElementById(namaKolom).classList.contains('bg-light')) {
+  if (document.getElementById(namaKolom).classList.contains('bg-light')) {
     document.getElementById(namaKolom).classList.remove("bg-light")
     totalHarga -= 50000
     jumlahKursi--

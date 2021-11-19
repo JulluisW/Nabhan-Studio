@@ -8,18 +8,21 @@
 
 .navbar{
   text-align: center;
-
   font-size: 1.5rem;
   margin: 0%;
   padding: 0%;
   display: flex;
-
-  font-size: 5rem;
+  font-size: 30px;
 
   background-color: slategrey;
   /* background-color: blueviolet; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+#navbarNavAltMarkup{
+  font-family: 'Pacifico', cursive;
+}
+
 
 .logo{
 width: 100px;
